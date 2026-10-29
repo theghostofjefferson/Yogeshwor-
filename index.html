@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yogeshwor Sharma — Economic Policy & Institutional Research</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Cormorant Garamond (Editorial Serif), Plus Jakarta Sans, JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#151d33',
+                            900: '#0B132B',
+                            950: '#060a17',
+                        },
+                        slate: {
+                            750: '#233044',
+                            850: '#141e2e',
+                        },
+                        gold: {
+                            400: '#D4AF37',
+                            500: '#C5A059',
+                            600: '#B8860B',
+                            700: '#996515',
+                            100: '#FDF8EC',
+                        },
+                        cream: {
+                            50: '#FAFAFA',
+                            100: '#F8F9FA',
+                            200: '#F1F3F5',
+                            300: '#E9ECEF',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar & editorial styling */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0B132B;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #233044;
+            border-radius: 0px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #C5A059;
+        }
+        
+        .border-gold-accent {
+            border-image: linear-gradient(to right, #C5A059, rgba(197, 160, 89, 0.2)) 1;
+        }
+
+        .editorial-shadow {
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.4);
+        }
+
+        .tab-active {
+            border-bottom: 2px solid #C5A059;
+            color: #C5A059 !important;
+            font-weight: 600;
+        }
+
+        /* Publication style drop cap */
+        .dropcap::first-letter {
+            font-family: 'Cormorant Garamond', serif;
+            float: left;
+            font-size: 3.5rem;
+            line-height: 2.8rem;
+            padding-top: 4px;
+            padding-right: 10px;
+            padding-left: 3px;
+            color: #C5A059;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="bg-navy-900 text-slate-300 font-sans antialiased selection:bg-gold-500 selection:text-navy-950 min-h-screen flex flex-col justify-between">
+
+    <!-- TOP INSTITUTIONAL BAR -->
+    <div class="bg-navy-950 border-b border-slate-800 text-[11px] font-mono tracking-wider py-2 text-slate-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center space-x-3">
+                <span class="inline-block w-2 h-2 bg-emerald-500 rounded-full"></span>
+                <span>OFFICIAL PORTFOLIO & POLICY RESEARCH BRIEF</span>
+            </div>
+            <div class="flex items-center space-x-6">
+                <span>INSTITUTE FOR EDUCATIONAL ACCOUNTABILITY</span>
+                <a href="https://ieainstitute.org" target="_blank" rel="noopener noreferrer" class="text-gold-400 hover:underline flex items-center space-x-1">
+                    <span>ieainstitute.org</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVIGATION -->
+    <nav class="sticky top-0 z-50 bg-navy-900/95 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand / Signature -->
+                <a href="#overview" class="flex items-baseline space-x-3 group">
+                    <span class="font-serif font-bold text-2xl text-cream-50 tracking-tight group-hover:text-gold-400 transition-colors">Yogeshwor Sharma</span>
+                    <span class="hidden md:inline-block text-xs font-mono text-slate-400 tracking-widest uppercase">| Policy Analyst & Strategist</span>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <div class="hidden lg:flex items-center space-x-8 text-xs font-mono uppercase tracking-wider">
+                    <a href="#overview" class="text-slate-300 hover:text-gold-400 transition-colors">Overview</a>
+                    <a href="#essay" class="text-slate-300 hover:text-gold-400 transition-colors">Policy Framing</a>
+                    <a href="#research" class="text-slate-300 hover:text-gold-400 transition-colors">Research & Paper</a>
+                    <a href="#leadership" class="text-slate-300 hover:text-gold-400 transition-colors">Institutional Work</a>
+                    <a href="#civic" class="text-slate-300 hover:text-gold-400 transition-colors">Civic & Outreach</a>
+                    <a href="#honors" class="text-slate-300 hover:text-gold-400 transition-colors">Honors</a>
+                    <a href="https://ieainstitute.org" target="_blank" rel="noopener" class="px-3 py-1.5 border border-gold-500/40 text-gold-400 hover:bg-gold-500 hover:text-navy-950 font-semibold transition-all flex items-center space-x-1.5">
+                        <span>IEA Portal</span>
+                        <i class="fa-solid fa-external-link text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-slate-300 hover:text-gold-400 focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden border-b border-slate-800 bg-navy-950 px-6 py-6 space-y-4 text-xs font-mono uppercase tracking-wider">
+            <a href="#overview" class="mobile-link block text-slate-300 hover:text-gold-400">Overview</a>
+            <a href="#essay" class="mobile-link block text-slate-300 hover:text-gold-400">Policy Framing</a>
+            <a href="#research" class="mobile-link block text-slate-300 hover:text-gold-400">Research & Paper</a>
+            <a href="#leadership" class="mobile-link block text-slate-300 hover:text-gold-400">Institutional Work</a>
+            <a href="#civic" class="mobile-link block text-slate-300 hover:text-gold-400">Civic & Outreach</a>
+            <a href="#honors" class="mobile-link block text-slate-300 hover:text-gold-400">Honors</a>
+            <a href="https://ieainstitute.org" target="_blank" class="block text-gold-400 font-semibold pt-2 border-t border-slate-800">Visit IEA Website (ieainstitute.org) &rarr;</a>
+        </div>
+    </nav>
+
+    <main class="flex-grow">
+        
+        <!-- HERO / OVERVIEW SECTION -->
+        <section id="overview" class="py-16 lg:py-24 border-b border-slate-800 relative bg-gradient-to-b from-navy-900 via-navy-900 to-navy-950">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                    
+                    <!-- Main Hero Bio Column -->
+                    <div class="lg:col-span-8 space-y-8">
+                        
+                        <div class="space-y-3">
+                            <div class="inline-flex items-center space-x-2 text-xs font-mono text-gold-400 tracking-widest uppercase border-b border-gold-500/30 pb-1">
+                                <span>Institutional Leader • Macroeconomic Research</span>
+                            </div>
+                            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-cream-50 leading-tight">
+                                Yogeshwor Sharma
+                            </h1>
+                            <p class="text-xl sm:text-2xl font-serif italic text-slate-300 font-normal">
+                                President & Co-Founder, Institute for Educational Accountability | MD, Financial Initiatives Nepal
+                            </p>
+                        </div>
+
+                        <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-sans max-w-3xl">
+                            Bridging macroeconomic policy, institutional governance, and youth empowerment. Primary research focuses on evaluating the feasibility of political campaign promises against central banking mechanics, monetary supply limits, and structural bureaucratic friction.
+                        </p>
+
+                        <!-- Call to Action Buttons -->
+                        <div class="flex flex-wrap gap-4 pt-2">
+                            <a href="#research" class="px-6 py-3 bg-gold-500 hover:bg-gold-400 text-navy-950 font-semibold text-xs uppercase tracking-wider transition-colors">
+                                View Published Research
+                            </a>
+                            <a href="https://ieainstitute.org" target="_blank" rel="noopener" class="px-6 py-3 border border-slate-700 hover:border-gold-500/60 text-cream-50 font-semibold text-xs uppercase tracking-wider transition-colors flex items-center space-x-2">
+                                <span>IEA Platform (ieainstitute.org)</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-gold-400"></i>
+                            </a>
+                            <a href="#contact" class="px-6 py-3 border border-slate-800 hover:bg-slate-800 text-slate-300 text-xs uppercase tracking-wider transition-colors">
+                                Contact
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Executive Stats Side Card -->
+                    <div class="lg:col-span-4 bg-navy-950 border border-slate-800 p-6 space-y-6">
+                        <div class="border-b border-slate-800 pb-3">
+                            <h3 class="font-mono text-xs text-gold-400 uppercase tracking-widest">Key Performance Indicators</h3>
+                        </div>
+
+                        <div class="space-y-5">
+                            <div>
+                                <div class="text-2xl font-serif font-bold text-cream-50">Nepal Country Top</div>
+                                <div class="text-xs font-mono text-slate-400 mt-0.5">Cambridge A-Levels: Business & Accounting</div>
+                            </div>
+
+                            <div class="border-t border-slate-800/80 pt-4">
+                                <div class="text-2xl font-serif font-bold text-cream-50">Silver Medalist</div>
+                                <div class="text-xs font-mono text-slate-400 mt-0.5">Nepal Economics Olympiad (NEO)</div>
+                            </div>
+
+                            <div class="border-t border-slate-800/80 pt-4">
+                                <div class="text-2xl font-serif font-bold text-cream-50">200+ Students Surveyed</div>
+                                <div class="text-xs font-mono text-slate-400 mt-0.5">IEA School Accountability Data Framework</div>
+                            </div>
+
+                            <div class="border-t border-slate-800/80 pt-4">
+                                <div class="text-2xl font-serif font-bold text-cream-50">$10,000 USD Raised</div>
+                                <div class="text-xs font-mono text-slate-400 mt-0.5">First Student-Led High School Gym Establishment</div>
+                            </div>
+                        </div>
+
+                        <div class="border-t border-slate-800 pt-4 text-[11px] font-mono text-slate-500">
+                            Verified Academic & Institutional Records • Kathmandu, Nepal
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ESSAY & PHILOSOPHICAL NARRATIVE -->
+        <section id="essay" class="py-20 bg-navy-950 border-b border-slate-800">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="space-y-3 mb-10 text-center">
+                    <span class="text-xs font-mono text-gold-400 uppercase tracking-widest">Policy Perspective</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-cream-50">On Institutional Constraints and Economic Tuning</h2>
+                    <div class="w-12 h-0.5 bg-gold-500 mx-auto"></div>
+                </div>
+
+                <!-- Editorial Pull Quote -->
+                <div class="my-8 p-8 border-l-2 border-gold-500 bg-navy-900/60 space-y-3">
+                    <p class="font-serif italic text-xl text-cream-50 leading-relaxed">
+                        "Change within an institution requires far more than just a change in leadership; it demands managing conflicting interests, navigating external rigidities, and mastering the fundamental operational practices."
+                    </p>
+                    <p class="text-xs font-mono text-gold-400 uppercase tracking-wider">— Yogeshwor Sharma</p>
+                </div>
+
+                <!-- Essay Content -->
+                <div class="prose prose-invert prose-slate max-w-none font-sans text-slate-300 leading-relaxed space-y-6 text-base">
+                    <p class="dropcap">
+                        My engagement with economic theory began with an elementary question regarding monetary devaluation: why does the purchasing power of accumulated savings diminish over time? Early mentorship directed me to foundational macroeconomic mechanics—that price stability relies on managing the money supply. Yet, if economic policy were as straightforward as adjusting the pegs on a string instrument, why do persistent market distortions and unfeasible political promises continue to undermine fiscal stability?
+                    </p>
+                    <p>
+                        This question led me to initiate an independent research inquiry interviewing former leaders of the Nepal Rastra Bank (Central Bank), National Planning Commission members, and senior commercial bankers. The investigation revealed that political parties frequently pledge unfeasible growth targets—such as projecting post-election growth rates outpacing major global economies—not out of a lack of technical calculation, but due to public opinion pressures and severe institutional constraints.
+                    </p>
+                    <p>
+                        Later, as Managing Director of Financial Initiatives Nepal (FIN) and President of the Institute for Educational Accountability (IEA), these theoretical dynamics became operational reality. From navigating bureaucratic friction during registration to synchronizing diverse internal stakeholder timelines across rural and urban districts, I observed that policy failure rarely stems from ignorance alone. Rather, it is the result of unmanaged structural frictions. Effective governance requires institutional architects who understand both macroeconomic fundamentals and internal operational constraints.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FEATURED INDEPENDENT RESEARCH -->
+        <section id="research" class="py-20 border-b border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+                
+                <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-slate-800 pb-6">
+                    <div>
+                        <span class="text-xs font-mono text-gold-400 uppercase tracking-widest">Primary Fieldwork</span>
+                        <h2 class="text-3xl font-serif font-bold text-cream-50 mt-1">Published Policy Research</h2>
+                    </div>
+                    <span class="text-xs font-mono text-slate-400 mt-2 md:mt-0">Qualitative & Quantitative Methodology</span>
+                </div>
+
+                <!-- Main Paper Presentation Card -->
+                <div class="bg-navy-950 border border-slate-800 p-8 lg:p-10 space-y-6">
+                    <div class="flex flex-wrap items-center justify-between gap-4">
+                        <span class="px-3 py-1 bg-gold-500/10 text-gold-400 border border-gold-500/30 text-xs font-mono uppercase tracking-wider">Independent Policy Monograph</span>
+                        <span class="text-xs font-mono text-slate-400">Fieldwork & Interview Period: 2023–2024</span>
+                    </div>
+
+                    <h3 class="text-2xl sm:text-3xl font-serif font-bold text-cream-50">
+                        The Economic Feasibility of Political Parties’ Promises
+                    </h3>
+
+                    <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-sans">
+                        An empirical investigation assessing campaign manifesto promises against central bank monetary policy frameworks, fiscal budgets, and geographical feasibility in Nepal. Compiled direct interviews with former executive directors of the central bank, senior planners, and commercial banking leaders.
+                    </p>
+
+                    <!-- Key Research Insights Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 border-t border-slate-800/80">
+                        <div class="space-y-2">
+                            <span class="text-xs font-mono text-gold-400 uppercase">01. Central Bank Insights</span>
+                            <p class="text-xs text-slate-300 leading-normal">
+                                Interviewed former NRB Executive Directors regarding political pressures vs. macroeconomic mechanics and inflation targeting.
+                            </p>
+                        </div>
+                        <div class="space-y-2">
+                            <span class="text-xs font-mono text-gold-400 uppercase">02. Infrastructure Realities</span>
+                            <p class="text-xs text-slate-300 leading-normal">
+                                Evaluated pledges such as nationwide rail connectivity, identifying severe capital allocation and geographical impossibilities.
+                            </p>
+                        </div>
+                        <div class="space-y-2">
+                            <span class="text-xs font-mono text-gold-400 uppercase">03. Institutional Constraints</span>
+                            <p class="text-xs text-slate-300 leading-normal">
+                                Formulated a theoretical model showing how short-term public opinion traps political actors into unfeasible commitments.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 flex items-center justify-between">
+                        <button onclick="openResearchModal()" class="px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-gold-400 text-xs font-mono uppercase tracking-wider transition-colors border border-slate-700 flex items-center space-x-2">
+                            <i class="fa-solid fa-file-lines"></i>
+                            <span>Read Full Executive Summary</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- INSTITUTIONAL WORK & LEADERSHIP (TABBED / FILTERABLE) -->
+        <section id="leadership" class="py-20 bg-navy-950 border-b border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+                
+                <div class="space-y-3">
+                    <span class="text-xs font-mono text-gold-400 uppercase tracking-widest">Leadership Portfolio</span>
+                    <h2 class="text-3xl font-serif font-bold text-cream-50">Institutional Governance & Ventures</h2>
+                </div>
+
+                <!-- Navigation Tabs -->
+                <div class="flex border-b border-slate-800 text-xs font-mono uppercase tracking-wider space-x-8" id="portfolio-tabs">
+                    <button class="tab-btn tab-active pb-3" data-tab="all">All Initiatives</button>
+                    <button class="tab-btn text-slate-400 hover:text-slate-200 pb-3" data-tab="institutional">Institutional Governance</button>
+                    <button class="tab-btn text-slate-400 hover:text-slate-200 pb-3" data-tab="student">Infrastructure & Education</button>
+                </div>
+
+                <!-- Tabbed Content Items -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="portfolio-grid">
+                    
+                    <!-- Item 1: IEA -->
+                    <div class="portfolio-item bg-navy-900 border border-slate-800 p-8 space-y-6" data-category="institutional">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <span class="text-xs font-mono text-gold-400 uppercase">Co-Founder & President</span>
+                                <h3 class="text-xl font-serif font-bold text-cream-50 mt-1">Institute for Educational Accountability (IEA)</h3>
+                            </div>
+                            <a href="https://ieainstitute.org" target="_blank" rel="noopener" class="text-slate-400 hover:text-gold-400">
+                                <i class="fa-solid fa-external-link"></i>
+                            </a>
+                        </div>
+                        <p class="text-xs text-slate-300 leading-relaxed font-sans">
+                            Established an independent civic research organization dedicated to systemic educational metrics. Surveyed 200+ secondary students, consolidated public online data, ranked regional academic institutions, and built an open-access platform for institutional accountability.
+                        </p>
+                        <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-[11px] font-mono">
+                            <span class="text-slate-400">Key Metric: 200+ Kids Surveyed</span>
+                            <a href="https://ieainstitute.org" target="_blank" rel="noopener" class="text-gold-400 hover:underline">ieainstitute.org &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: FIN -->
+                    <div class="portfolio-item bg-navy-900 border border-slate-800 p-8 space-y-6" data-category="institutional">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <span class="text-xs font-mono text-gold-400 uppercase">Managing Director</span>
+                                <h3 class="text-xl font-serif font-bold text-cream-50 mt-1">Financial Initiatives Nepal (FIN)</h3>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-300 leading-relaxed font-sans">
+                            Directed the execution of nationwide Business & Economics Olympiads across Nepal. Championed equity initiatives enabling youth from rural regions to participate, compete, and engage in peer exchange with urban scholars.
+                        </p>
+                        <div class="pt-4 border-t border-slate-800 text-[11px] font-mono text-slate-400">
+                            Impact: Rural-Urban Academic Integration & Leadership
+                        </div>
+                    </div>
+
+                    <!-- Item 3: School Gym -->
+                    <div class="portfolio-item bg-navy-900 border border-slate-800 p-8 space-y-6" data-category="student">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <span class="text-xs font-mono text-gold-400 uppercase">Vice President & Initiator</span>
+                                <h3 class="text-xl font-serif font-bold text-cream-50 mt-1">Budhanilkantha Student-Led High School Gym</h3>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-300 leading-relaxed font-sans">
+                            Formulated establishment plan and successfully fundraised $10,000 USD. Negotiated with school authorities and equipment suppliers to establish Nepal's first student-led high school gym. Managed maintenance and led fitness sessions as a anti-bullying physical empowerment strategy.
+                        </p>
+                        <div class="pt-4 border-t border-slate-800 text-[11px] font-mono text-slate-400">
+                            Capital Raised: $10,000 USD • Student Governance
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Budhanilkantha Prefect -->
+                    <div class="portfolio-item bg-navy-900 border border-slate-800 p-8 space-y-6" data-category="student">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <span class="text-xs font-mono text-gold-400 uppercase">School Prefect</span>
+                                <h3 class="text-xl font-serif font-bold text-cream-50 mt-1">Budhanilkantha School Student Council</h3>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-300 leading-relaxed font-sans">
+                            Spearheaded institutional reforms within school governance, including the structural expansion of leadership roles and mentoring platforms dedicated to junior students.
+                        </p>
+                        <div class="pt-4 border-t border-slate-800 text-[11px] font-mono text-slate-400">
+                            Focus: Institutional Bylaw Reform & Junior Inclusion
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CIVIC IMPACT & COMMUNITY OUTREACH -->
+        <section id="civic" class="py-20 border-b border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+                
+                <div class="space-y-3">
+                    <span class="text-xs font-mono text-gold-400 uppercase tracking-widest">Civic Duty & Grassroots Outreach</span>
+                    <h2 class="text-3xl font-serif font-bold text-cream-50">Community Engagement</h2>
+                </div>
+
+                <!-- Grid of Clean Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <div class="bg-navy-950 border border-slate-800 p-6 space-y-3">
+                        <div class="text-gold-400 text-lg"><i class="fa-solid fa-folder-open"></i></div>
+                        <h4 class="font-serif font-bold text-cream-50 text-base">Spinal Cord Injury Patients NGO (SCINN)</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Official Document Manager handling grant archives, policy documentation, and patient compliance records.
+                        </p>
+                    </div>
+
+                    <div class="bg-navy-950 border border-slate-800 p-6 space-y-3">
+                        <div class="text-gold-400 text-lg"><i class="fa-solid fa-mountain"></i></div>
+                        <h4 class="font-serif font-bold text-cream-50 text-base">Rural Dolpa Entrepreneurship Project</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Conducted entrepreneurial training workshops for youth in remote Dolpa to promote self-employment capacity.
+                        </p>
+                    </div>
+
+                    <div class="bg-navy-950 border border-slate-800 p-6 space-y-3">
+                        <div class="text-gold-400 text-lg"><i class="fa-solid fa-book-open-reader"></i></div>
+                        <h4 class="font-serif font-bold text-cream-50 text-base">Tanahun Literacy & Stationarity Drive</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Led financial literacy awareness sessions and stationery donation campaigns across 3 government schools in Tanahun.
+                        </p>
+                    </div>
+
+                    <div class="bg-navy-950 border border-slate-800 p-6 space-y-3">
+                        <div class="text-gold-400 text-lg"><i class="fa-solid fa-newspaper"></i></div>
+                        <h4 class="font-serif font-bold text-cream-50 text-base">National Economic Journalism</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Authored published journalism pieces in national broadsheets advocating for sustainable clothing promotion and industrial policy.
+                        </p>
+                    </div>
+
+                    <div class="bg-navy-950 border border-slate-800 p-6 space-y-3">
+                        <div class="text-gold-400 text-lg"><i class="fa-solid fa-users"></i></div>
+                        <h4 class="font-serif font-bold text-cream-50 text-base">Community Anti-Drug Campaign</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Organized local substance abuse prevention program engaging 80+ residents and 200+ local students.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ACADEMIC HONORS & DISTINCTIONS -->
+        <section id="honors" class="py-20 bg-navy-950 border-b border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+                
+                <div class="space-y-3">
+                    <span class="text-xs font-mono text-gold-400 uppercase tracking-widest">Academic Distinction</span>
+                    <h2 class="text-3xl font-serif font-bold text-cream-50">Honors & National Awards</h2>
+                </div>
+
+                <!-- Structured Table Layout -->
+                <div class="bg-navy-900 border border-slate-800 overflow-x-auto">
+                    <table class="w-full text-left border-collapse text-xs sm:text-sm">
+                        <thead>
+                            <tr class="border-b border-slate-800 bg-navy-950 text-gold-400 font-mono uppercase text-[11px] tracking-wider">
+                                <th class="py-4 px-6">Honor / Distinction</th>
+                                <th class="py-4 px-6">Discipline / Level</th>
+                                <th class="py-4 px-6">Awarding Body / Organization</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800 text-slate-300 font-sans">
+                            <tr class="hover:bg-navy-950/50">
+                                <td class="py-4 px-6 font-semibold text-cream-50">Top in Nepal (Rank 1)</td>
+                                <td class="py-4 px-6">Cambridge A-Levels Business</td>
+                                <td class="py-4 px-6 font-mono text-xs text-slate-400">Cambridge Assessment International Education</td>
+                            </tr>
+                            <tr class="hover:bg-navy-950/50">
+                                <td class="py-4 px-6 font-semibold text-cream-50">Top in Nepal (Rank 1)</td>
+                                <td class="py-4 px-6">Cambridge A-Levels Accounting</td>
+                                <td class="py-4 px-6 font-mono text-xs text-slate-400">Cambridge Assessment International Education</td>
+                            </tr>
+                            <tr class="hover:bg-navy-950/50">
+                                <td class="py-4 px-6 font-semibold text-cream-50">Silver Medalist</td>
+                                <td class="py-4 px-6">Nepal Economics Olympiad (NEO)</td>
+                                <td class="py-4 px-6 font-mono text-xs text-slate-400">National Economics Olympiad Committee</td>
+                            </tr>
+                            <tr class="hover:bg-navy-950/50">
+                                <td class="py-4 px-6 font-semibold text-cream-50">Higher Distinction</td>
+                                <td class="py-4 px-6">International Business Olympiad</td>
+                                <td class="py-4 px-6 font-mono text-xs text-slate-400">IBO National Round Committee</td>
+                            </tr>
+                            <tr class="hover:bg-navy-950/50">
+                                <td class="py-4 px-6 font-semibold text-cream-50">Bronze Medalist</td>
+                                <td class="py-4 px-6">National Math League</td>
+                                <td class="py-4 px-6 font-mono text-xs text-slate-400">Mathematics League Nepal</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FOOTER & CONTACT BAR -->
+        <section id="contact" class="py-16 bg-navy-950">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+                
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-slate-800 pb-8 gap-6">
+                    <div>
+                        <h3 class="text-2xl font-serif font-bold text-cream-50">Yogeshwor Sharma</h3>
+                        <p class="text-xs font-mono text-slate-400 mt-1">Economic Policy Research & Educational Governance</p>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-4 text-xs font-mono">
+                        <a href="https://ieainstitute.org" target="_blank" rel="noopener" class="px-4 py-2 bg-gold-500 text-navy-950 font-bold uppercase tracking-wider hover:bg-gold-400 transition-colors flex items-center space-x-1.5">
+                            <span>Institute Portal: ieainstitute.org</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 font-mono gap-4">
+                    <p>© <span id="year"></span> Yogeshwor Sharma. All rights reserved.</p>
+                    <p>Verified Academic & Institutional Profile • Kathmandu, Nepal</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- RESEARCH MODAL -->
+    <div id="research-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-navy-950/90 backdrop-blur-md">
+        <div class="bg-navy-900 border border-slate-800 max-w-2xl w-full p-8 space-y-6 max-h-[85vh] overflow-y-auto">
+            <div class="flex justify-between items-start border-b border-slate-800 pb-4">
+                <div>
+                    <span class="text-xs font-mono text-gold-400 uppercase">Monograph Executive Summary</span>
+                    <h3 class="text-xl font-serif font-bold text-cream-50 mt-1">The Economic Feasibility of Political Parties’ Promises</h3>
+                </div>
+                <button onclick="closeResearchModal()" class="text-slate-400 hover:text-white p-1">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <div class="space-y-4 text-xs sm:text-sm text-slate-300 leading-relaxed font-sans">
+                <p class="font-semibold text-cream-50">Abstract & Research Methodology:</p>
+                <p>
+                    This paper investigates the divergence between election campaign promises and fiscal-monetary realities in Nepal. Through elite interviews conducted with former executive directors of the Nepal Rastra Bank (Central Bank), National Planning Commission specialists, and commercial bank leadership, the paper builds an analytical framework explaining how structural institutional limits lead to macroeconomic distortions.
+                </p>
+                <p class="font-semibold text-cream-50">Primary Conclusions:</p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>Political parties routinely project growth targets exceeding historical capital expenditure capacities due to institutional signaling pressure.</li>
+                    <li>Macroeconomic policy decisions require managing conflicting internal constraints rather than relying solely on theoretical models.</li>
+                    <li>Institutional reform must establish independent vetting mechanisms for electoral promises to ensure inflation and debt stability.</li>
+                </ul>
+            </div>
+
+            <div class="pt-4 border-t border-slate-800 flex justify-end">
+                <button onclick="closeResearchModal()" class="px-4 py-2 bg-slate-800 text-slate-300 text-xs font-mono uppercase tracking-wider hover:bg-slate-700">
+                    Close Document
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPT FOR INTERACTIVITY -->
+    <script>
+        // Set dynamic year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+
+        // Portfolio Tabs Filtering
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const items = document.querySelectorAll('.portfolio-item');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tabBtns.forEach(b => b.classList.remove('tab-active', 'text-slate-200'));
+                tabBtns.forEach(b => b.classList.add('text-slate-400'));
+                
+                btn.classList.add('tab-active');
+                btn.classList.remove('text-slate-400');
+
+                const filter = btn.getAttribute('data-tab');
+
+                items.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Modal Controls
+        function openResearchModal() {
+            document.getElementById('research-modal').classList.remove('hidden');
+        }
+
+        function closeResearchModal() {
+            document.getElementById('research-modal').classList.add('hidden');
+        }
+    </script>
+
+</body>
+</html>
